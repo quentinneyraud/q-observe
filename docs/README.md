@@ -12,13 +12,13 @@ yarn add q-observe
 
 ```js
 // minified
-import q-observe from 'q-observe'
+import q-observe from '@qneyraud/q-observe'
 // not minified
-import q-observe from 'q-observe/umd/q-observe.min'
+import q-observe from '@qneyraud/q-observe/umd/q-observe.min'
 // polyfilled
-import q-observe from 'q-observe/umd/q-observe.polyfilled'
+import q-observe from '@qneyraud/q-observe/umd/q-observe.polyfilled'
 // minified and polyfilled
-import q-observe from 'q-observe/umd/q-observe.polyfilled.min'
+import q-observe from '@qneyraud/q-observe/umd/q-observe.polyfilled.min'
 
 ```
 
