@@ -6,11 +6,11 @@ const fs = require('fs')
 /**
  * Change here, then run npm init
  */
-const LIBRARY_TITLE = 'Q stylus'
-const LIBRARY_DESCRIPTION = 'Stylus stack with CSS reset, responsive breakpoints, easing, grid and helpers'
-const LIBRARY_NAME = 'q-stylus'
-const LIBRARY_DOC_URL = 'https://quentinneyraud.github.io/q-stylus'
-const LIBRARY_REPO_URL = 'https://github.com/quentinneyraud/q-stylus'
+const LIBRARY_TITLE = 'Q observe'
+const LIBRARY_DESCRIPTION = 'Intersection observer helper library'
+const LIBRARY_NAME = 'q-observe'
+const LIBRARY_DOC_URL = 'https://quentinneyraud.github.io/q-observe'
+const LIBRARY_REPO_URL = 'https://github.com/quentinneyraud/q-observe'
 
 const replaceWords = { LIBRARY_TITLE, LIBRARY_DESCRIPTION, LIBRARY_NAME, LIBRARY_DOC_URL, LIBRARY_REPO_URL }
 const files = ['package.json', 'rollup.config.js', 'docs/index.html', 'docs/README.md', 'example/index.html', 'example/index.js']

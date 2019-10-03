@@ -1,24 +1,24 @@
-# LIBRARY_TITLE
+# Q observe
 
-> LIBRARY_DESCRIPTION
+> Intersection observer helper library
 
 ## Install
 
 ```bash
-yarn add LIBRARY_NAME 
+yarn add q-observe 
 ```
 
 ## Usage
 
 ```js
 // minified
-import LIBRARY_NAME from 'LIBRARY_NAME'
+import q-observe from 'q-observe'
 // not minified
-import LIBRARY_NAME from 'LIBRARY_NAME/umd/LIBRARY_NAME.min'
+import q-observe from 'q-observe/umd/q-observe.min'
 // polyfilled
-import LIBRARY_NAME from 'LIBRARY_NAME/umd/LIBRARY_NAME.polyfilled'
+import q-observe from 'q-observe/umd/q-observe.polyfilled'
 // minified and polyfilled
-import LIBRARY_NAME from 'LIBRARY_NAME/umd/LIBRARY_NAME.polyfilled.min'
+import q-observe from 'q-observe/umd/q-observe.polyfilled.min'
 
 ```
 
@@ -26,8 +26,8 @@ import LIBRARY_NAME from 'LIBRARY_NAME/umd/LIBRARY_NAME.polyfilled.min'
 
 ```
 # clone repo
-git clone LIBRARY_REPO_URL
-cd LIBRARY_NAME
+git clone https://github.com/quentinneyraud/q-observe
+cd q-observe
 
 # install dependencies
 yarn

@@ -1,8 +1,8 @@
 {
-  "name": "LIBRARY_NAME",
+  "name": "q-observe",
   "version": "1.0.0",
   "license": "ISC",
-  "description": "LIBRARY_DESCRIPTION",
+  "description": "Intersection observer helper library",
   "keywords": [],
   "author": {
     "email": "quentin.neyraud@gmail.com",
@@ -20,16 +20,16 @@
       "name": "Quentin Neyraud"
     }
   ],
-  "homepage": "LIBRARY_DOC_URL",
+  "homepage": "https://quentinneyraud.github.io/q-observe",
   "repository": {
     "type": "",
-    "url": "LIBRARY_REPO_URL"
+    "url": "https://github.com/quentinneyraud/q-observe"
   },
   "bugs": {
     "email": "quentin.neyraud@gmail.com",
-    "url": "LIBRARY_REPO_URL/issues"
+    "url": "https://github.com/quentinneyraud/q-observe/issues"
   },
-  "main": "umd/LIBRARY_NAME.min.js",
+  "main": "umd/q-observe.min.js",
   "files": [
     "umd/*"
   ],
