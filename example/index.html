@@ -8,7 +8,58 @@
 </head>
 <body>
 
-  <h1>Q observe</h1>
+  <style>
+    body {
+      min-height: 10000px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .box {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 100px;
+      background-color: red;
+    }
+
+    .box.in-view {
+      border: 10px solid #000;
+    }
+
+    #a {
+      background-color: red;
+      top: 0;
+    }
+
+    #b {
+      background-color: blue;
+      top: 100vh;
+    }
+
+    #c {
+      background-color: purple;
+      top: 5000px;
+    }
+
+    #d {
+      background-color: green;
+      top: 7500px;
+    }
+
+    #e {
+      background-color: yellow;
+      bottom: 0;
+    }
+  </style>
+
+  <div class="box" id="a"></div>
+  <div class="box" id="b"></div>
+  <div class="box" id="c"></div>
+  <div class="box" id="d"></div>
+  <div class="box" id="e"></div>
 
   <script src="./index.js"></script>
 </body>

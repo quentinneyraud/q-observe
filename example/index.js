@@ -1,3 +1,4 @@
-import q-observe from '../src/index'
+import QObserve from '../src/index'
 
-console.log(q-observe)
+const a = document.getElementById('a')
+QObserve.observe(a)
