@@ -1,49 +1,76 @@
-import ObservedElement from './ObservedElement'
-
-const DEFAULT_OPTIONS = {
-  thresholds: [0],
-  once: false
-}
+// import ObservedElement from './ObservedElement'
+import { preprocessElementArgument } from './utils'
 
 export default {
   observers: [],
   elements: [],
-  setDefaultOptions (options) {
-    this.defaultOptions = options
-  },
-  createObserver (options) {
-    const ioInstance = new window.IntersectionObserver(intersections => {
-      console.log(intersections)
-    }, options)
-
-    const observer = {
-      elements: [],
-      ioInstance
+  observe (el = null, options) {
+    if (!el) {
+      console.warn('Element argument passed to observe function is not valid')
+      return
     }
 
-    this.observers.push(observer)
-    return observer
+    console.log(preprocessElementArgument(el))
   },
-  getObserver (options = null) {
-    options = {
-      ...this.defaultOptions,
-      ...options
+  observeOnce () {
+
+  },
+  unobserve () {
+
+  },
+  observeChildren (parentEl = null, options = {}) {
+    if (!parentEl) {
+      console.warn('Parent element argument passed to observeChildren function is not valid')
+      return
     }
 
-    const observer = this.observers.find(observer => observer.thresholds === options.thresholds)
+    const elements = preprocessElementArgument(parentEl)
 
-    return observer || this.createObserver(options)
-  },
-  observe (el, options = DEFAULT_OPTIONS) {
-    const observer = this.getObserver(options)
+    elements
+      .forEach(el => this.observe(el))
 
-    observer.elements.push(el)
-    observer.ioInstance.observe(el)
+    if (options.watch) {
+      const config = {
+        attributes: false,
+        childList: true,
+        characherData: false,
+        subtree: true
+      }
+
+      const callback = (mutationsList) => {
+        for (const mutation of mutationsList) {
+          if (mutation.type === 'childList') {
+            console.log('mutation:', mutation)
+            Array.from(mutation.addedNodes)
+              .forEach(node => this.observe(node))
+          }
+        }
+      }
+
+      const observer = new MutationObserver(callback)
+      elements
+        .forEach(el => observer.observe(el, config))
+    }
   },
-  observeOnce (el, options) {
+  unobserveChildren () {
 
   },
-  observeChildren (el, options) {
+  setDefault () {
+
+  },
+  setDefaultThreshold () {
+
+  },
+  setDefaultMargin () {
+
+  },
+  setDefaultOnce () {
+
+  },
+  getObservers () {
+
+  },
+  getObserver () {
 
   }
 }
